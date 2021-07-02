@@ -1,0 +1,16 @@
+# maven run skip test -> mvn clean install -DskipTests=true
+# run with docker compose -> docker-compose up
+server:
+  port: 7777
+spring:
+  application:
+    name: spring-docker-kubernetes
+  datasource:
+    url: jdbc:postgresql://postgresqldb:5431/dbdockerdev
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
